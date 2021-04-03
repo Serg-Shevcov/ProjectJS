@@ -7,21 +7,19 @@ let arr=[
   {question:' ', answer:'a', currectAnswer:'d'}
 ];
 
-arr.forEach((item) => {
-  if (item.currectAnswer === 'c') {
-    console.log(item);
-  }
-});
+let sumcurrectAnswer=0;
 
 function rezult(arr){
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] ['currectAnswer'] === arr[i] ['answer']) {
       console.log('Верно');
+      sumcurrectAnswer++;
     }
     else
       console.log('Неверно');
-
   }
+  const question = document.getElementById('question');
+  question.innerHTML = ('У Вас ' +sumcurrectAnswer+ ' правильных ответов');
 }
 
 rezult(arr)
